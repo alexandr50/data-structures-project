@@ -14,12 +14,19 @@ class Test(unittest.TestCase):
     def test_stack(self):
         item = Stack()
         self.assertEqual(item.top, None)
-        self.assertEqual(item.stack_data, [])
+
 
     def test_node_2(self):
         item = Stack()
         item.push('data_1')
         item.push('data_2')
         self.assertEqual(item.top.data, 'data_2')
+
+
+
+    def test_pop(self):
+        item = Stack()
+        item.push('data_1')
+        item.push('data_2')
         item.pop()
-        self.assertEqual(len(item.stack_data), 1)
+        self.assertEqual(item.top.data, 'data_1')
