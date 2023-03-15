@@ -43,12 +43,14 @@ class Stack:
         self.top = top.next_node
         return top.data
 
-    # def travel(self):
-    #
-    #     cur = self.top
-    #     while cur:
-    #         print(cur.data, end='-->')
-    #         cur = cur.next_node
-    #     print('None')
+    def __str__(self):
+        res  = ''
+        cur = self.top
+        while cur:
+            res += cur.data
+            res += '-->'
+            cur = cur.next_node
+        res += 'None'
+        return res
 
 
