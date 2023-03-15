@@ -30,3 +30,9 @@ class Test(unittest.TestCase):
         item.push('data_2')
         item.pop()
         self.assertEqual(item.top.data, 'data_1')
+
+    def test_str(self):
+        item = Stack()
+        item.push('data_1')
+        item.push('data_2')
+        self.assertEqual(str(item), 'data_2-->data_1-->None')
