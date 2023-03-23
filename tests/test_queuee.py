@@ -4,7 +4,7 @@ import unittest
 
 from src.queuee import Node, Queue
 
-class Test_Queue(unittest.TestCase):
+class Test(unittest.TestCase):
 
     def test_node(self):
         item = Node('data')
@@ -29,6 +29,8 @@ class Test_Queue(unittest.TestCase):
 
     def test_str(self):
         item = Queue()
+        self.assertEqual(item.dequeue(), None)
+        self.assertEqual(str(item), '')
         item.enqueue('data1')
         item.enqueue('data2')
         item.enqueue('data3')
