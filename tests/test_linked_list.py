@@ -22,4 +22,4 @@ class Test(unittest.TestCase):
 
     def test_print_empty(self):
         linked_list = LinkedList()
-        self.assertAlmostEqual(str(linked_list), None)
+        self.assertEqual(str(linked_list), 'None')
