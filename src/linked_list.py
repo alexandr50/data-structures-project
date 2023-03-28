@@ -51,3 +51,20 @@ class LinkedList(Queue):
 
         ll_string += ' None'
         return ll_string.lstrip(' ')
+
+    def to_list(self):
+        '''Метод возвращающий список с данными LinkedList'''
+        result = []
+        node = self.head
+        while node:
+            result.append(node.data)
+            node = node.next_node
+        return result
+
+    def get_data_by_id(self, value):
+        for item in self.to_list():
+            try:
+                if item['id'] == value:
+                    return item
+            except TypeError:
+                print('Данные не являются словарем или в словаре нет id.')
